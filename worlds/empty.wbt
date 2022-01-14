@@ -1,0 +1,67 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.36698766164132607 -0.6918660554590988 -0.6218049674186423 3.5182901885707496
+  position 0.4417258555450404 0.3096615594097976 0.61392195920318
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  rotation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0943951023931953
+  floorSize 2 2
+  floorAppearance PBRAppearance {
+    roughness 1
+    roughnessMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/appearances/protos/textures/parquetry/chequered_parquetry_roughness.jpg"
+      ]
+    }
+    metalness 0
+    normalMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/appearances/protos/textures/parquetry/chequered_parquetry_normal.jpg"
+      ]
+    }
+    occlusionMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/appearances/protos/textures/parquetry/chequered_parquetry_occlusion.jpg"
+      ]
+    }
+  }
+}
+E-puck {
+  hidden linearVelocity_0 0.030668431112183283 1.870138094798997e-07 0.006047082872287273
+  hidden angularVelocity_0 -0.001775429469681406 2.6793566659768664e-05 0.00916619913064167
+  hidden translation_1 0 0.02600000000000007 0.02
+  hidden rotation_1 0 0.9999999999999999 0 6.159128858555086
+  hidden linearVelocity_1 0.030623469359801134 -1.943665495288514e-07 0.006039158735355191
+  hidden angularVelocity_1 0.3019590650201237 -5.5589914880250055e-05 -1.5311731656632241
+  hidden translation_2 0 -0.026000000000000106 0.02
+  hidden rotation_2 0 1 0 4.937992183640993
+  hidden linearVelocity_2 0.030623720158873196 -1.8890717646124908e-07 0.006037875023240255
+  hidden angularVelocity_2 0.3018926140427952 3.409806485875464e-05 -1.5311862669084293
+  translation -0.342715658386818 -6.40309422693594e-05 0.17856095394207996
+  rotation -0.9906005894546163 -0.09624181982035948 -0.09720074222881359 1.5801507020308228
+  controller "my_controller_line_follower"
+  groundSensorsSlot [
+    DistanceSensor {
+      translation 0 0.02 0
+      rotation 0 1 0 1.57
+      name "ir1"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 -0.01 0
+      rotation 0 1 0 1.57
+      name "ir0"
+      type "infra-red"
+    }
+  ]
+}
+TrackOne {
+  translation 0 -0.0075 0
+}
